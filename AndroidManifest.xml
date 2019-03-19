@@ -4,26 +4,60 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/fosterleaders"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/fosterleaders_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <activity android:name=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+        <!-- The activity for the splash screen starts here -->
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+
+            <!-- android:theme="@style/SplashTheme"> -->
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
+        <!-- The  activity for contact us is below -->
+        <!-- This is the activity for sucessfull foster youth -->
+        <activity
+            android:name=".SuccessfullFosterYouth"
+            android:label="@string/Sucessfulfosteryouth"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ricardo.fosterleaders.SuccessfullFosterYouth" />
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Jrexecutivenetwork"
+            android:label="@string/Become_A_Junior_Affiliate"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ricardo.fosterleaders.Jrexecutivenetwork" />
+        </activity>
+        <!-- The foster leaders affiliate activity is below -->
+        <activity
+            android:name=".Fosterleaderaffiliate"
+            android:label="@string/Become_A_Foster_Leader_Affiliate"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ricardo.fosterleaders.Fosterleaderaffiliate" />
+        </activity>
+        <activity android:name=".ContactusActivity"
+            android:label="@string/Contactus"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ricardo.fosterleaders.ContactusActivity" />
 
-        <activity android:name=".contactus">
 
         </activity>
     </application>
