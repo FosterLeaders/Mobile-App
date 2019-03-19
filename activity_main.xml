@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center_vertical">
+    <!-- Use DrawerLayout as root container for activity -->
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Foster Leaders!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <ImageView
-        android:id="@+id/photo_image_view"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/fosterleaderslogo" />
+        android:fitsSystemWindows="true">
 
-    <Button
-        android:id="@+id/contactus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact-Us"
-        android:layout_alignParentBottom="true"
- android:onClick="gotocontactus"
-        android:layout_marginRight="160dp"
-
-        />
+        <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
 
 
-    <Button
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resources"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="5dp"
+        <android.support.v4.widget.DrawerLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-        android:layout_marginLeft="10dp"
-        />
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
 
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/jobs"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="40dp"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jobs" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
 
-</RelativeLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:src="@drawable/fosterleaders"
+
+                />
+
+
+
+        </FrameLayout>
+
+        <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/drawernavigation" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
