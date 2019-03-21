@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".contactus">
+    tools:context=".Contactus">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
 
     <ImageView
@@ -12,39 +19,45 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/fosterleaderslogo"
+        android:src="@drawable/fosterleaders"
         tools:ignore="ContentDescription"/>
 
     <TextView
         android:id="@+id/fl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#8b0000"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="serif-monospace"
         android:paddingLeft="20dp"
+        android:paddingTop="10dp"
         android:paddingRight="20dp"
         android:paddingBottom="8dp"
+        android:text="Foster Leaders"
+        android:textColor="#8b0000"
         android:textSize="25sp"
-        android:fontFamily="serif-monospace"
-        android:textStyle="bold"
-        android:text="Foster Leaders" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tagline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#8b0000"
         android:layout_below="@id/fl"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="8dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:textSize="15sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="serif-monospace"
-        android:textStyle="italic"
-        android:text="Assisting Former Foster Youth Today" />
+        android:paddingLeft="20dp"
+        android:paddingTop="8dp"
+        android:paddingRight="20dp"
+        android:text="Assisting Former Foster Youth Today"
+        android:textColor="#8b0000"
+        android:textSize="15sp"
+        android:textStyle="italic" />
 
 
     <TextView
